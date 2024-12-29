@@ -20,7 +20,16 @@ const postSchema = new mongoose.Schema({
     mental_helth: {
         type: String,
         required: true
+    },
+    scholarship_12th: {
+        type: String,
+        required: true
+    },
+    scholarship_collage: {
+        type: String,
+        required: true
     }
+
 });
 const Post = mongoose.model('Post', postSchema);
 export default Post;
