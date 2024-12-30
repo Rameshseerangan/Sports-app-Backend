@@ -15,20 +15,20 @@ const postSchema = new mongoose.Schema({
         content: {
           type: String,
           required: true,
-          default: "Content for this subheading will go here.",
+          default: "",
         },
       },
     ],
     required: true,
     default: [
-      { subheading: "Professional Badminton Player", content: "Details about being a professional player." },
-      { subheading: "Coach/Trainer", content: "Guidance for becoming a coach or trainer." },
-      { subheading: "Sports Analyst/Commentator", content: "Information about a career as a sports analyst." },
-      { subheading: "Umpire/Match Official", content: "How to become an umpire or match official." },
-      { subheading: "Fitness Trainer", content: "Fitness trainer career path details." },
-      { subheading: "Administrator/Manager", content: "Roles and responsibilities of administrators." },
-      { subheading: "Success Stories", content: "Inspirational success stories." },
-      { subheading: "Earnings and Growth", content: "Details about earning potential and career growth." },
+      { subheading: "Professional Player", content: "" },
+      { subheading: "Coach/Trainer", content: " " },
+      { subheading: "Sports Analyst/Commentator", content: "" },
+      { subheading: "Umpire/Match Official", content: "" },
+      { subheading: "Fitness Trainer", content: "" },
+      { subheading: "Administrator/Manager", content: "" },
+      { subheading: "Success Stories", content: "" },
+      { subheading: "Earnings and Growth", content: "" },
     ],
   },
   Ruls: {
@@ -41,20 +41,20 @@ const postSchema = new mongoose.Schema({
         content: {
           type: String,
           required: true,
-          default: "Content for this subheading will go here.",
+          default: "",
         },
       },
     ],
     required: true,
     default: [
-      { subheading: "Warm-Up", content: "Details about warm-up routines." },
-      { subheading: "Technical Skills", content: "Technical skills required for excellence." },
-      { subheading: "Tactical Training", content: "Tactical training methods." },
-      { subheading: "Physical Conditioning", content: "Physical conditioning tips." },
-      { subheading: "Nutrition Plan", content: "Recommended nutrition plans." },
+      { subheading: "Warm-Up", content: "" },
+      { subheading: "Technical Skills", content: "" },
+      { subheading: "Tactical Training", content: "" },
+      { subheading: "Physical Conditioning", content: "" },
+      { subheading: "Nutrition Plan", content: "" },
     ],
   },
-  physical_helth: {
+  physical_strength: {
     type: [
       {
         subheading: {
@@ -64,17 +64,17 @@ const postSchema = new mongoose.Schema({
         content: {
           type: String,
           required: true,
-          default: "Content for this subheading will go here.",
+          default: "",
         },
       },
     ],
     required: true,
     default: [
-      { subheading: "Fitness Requirements", content: "Fitness standards required." },
-      { subheading: "Recommended Exercises", content: "Exercises to enhance fitness." },
+      { subheading: "Fitness Requirements", content: "" },
+      { subheading: "Recommended Exercises", content: "" },
     ],
   },
-  mental_helth: {
+  mental_strength: {
     type: [
       {
         subheading: {
@@ -84,15 +84,15 @@ const postSchema = new mongoose.Schema({
         content: {
           type: String,
           required: true,
-          default: "Content for this subheading will go here.",
+          default: "",
         },
       },
     ],
     required: true,
     default: [
-      { subheading: "Health Standards", content: "Overview of health standards." },
-      { subheading: "Preventive Measures", content: "Preventive measures for safety." },
-      { subheading: "Common Injuries in Badminton", content: "Details about common injuries." },
+      { subheading: "Health Standards", content: "" },
+      { subheading: "Preventive Measures", content: " "},
+      { subheading: "Common Injuries", content: "" },
     ],
   },
   scholarship_12th: {
@@ -105,15 +105,15 @@ const postSchema = new mongoose.Schema({
         content: {
           type: String,
           required: true,
-          default: "Content for this subheading will go here.",
+          default: "",
         },
       },
     ],
     required: true,
     default: [
-      { subheading: "Achievements", content: "Achievements required for scholarships." },
-      { subheading: "Academic Standards", content: "Academic criteria for eligibility." },
-      { subheading: "Documentation", content: "Required documents for application." },
+      { subheading: "Achievements", content: "" },
+      { subheading: "Academic Standards", content: "" },
+      { subheading: "Documentation", content: "" },
     ],
   },
   scholarship_collage: {
@@ -126,17 +126,24 @@ const postSchema = new mongoose.Schema({
         content: {
           type: String,
           required: true,
-          default: "Content for this subheading will go here.",
+          default: "",
         },
       },
     ],
     required: true,
     default: [
-      { subheading: "Sports Achievements", content: "Sports achievements for scholarships." },
-      { subheading: "Academic Criteria", content: "Academic standards for college scholarships." },
-      { subheading: "Selection Process", content: "Details about the selection process." },
-      { subheading: "Bonus Points", content: "Information about bonus points." },
+      { subheading: "Sports Achievements", content: "" },
+      { subheading: "Academic Criteria", content: "" },
+      { subheading: "Selection Process", content: "" },
+      { subheading: "Bonus Points", content: "" },
     ],
+  },
+  Roadmap: {
+    roadmapImg: {
+      type: String, // Assuming you store the image URL as a string
+      required: false,
+      default: "",
+    },
   },
 });
 

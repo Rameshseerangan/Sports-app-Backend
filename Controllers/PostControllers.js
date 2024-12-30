@@ -3,16 +3,17 @@ import Post from "../Models/postModels.js";
 
 export const createPost = async (req, res) => {
   try {
-    const { sports, Feature, Ruls, physical_helth, mental_helth, scholarship_12th, scholarship_collage } = req.body;
+    const { sports, Feature, Ruls, physical_strength, mental_strength, scholarship_12th, scholarship_collage,Roadmap } = req.body;
 
     const newPost = new Post({
       sports,
       Feature,
       Ruls,
-      physical_helth,
-      mental_helth,
+      physical_strength,
+      mental_strength,
       scholarship_12th,
       scholarship_collage,
+      Roadmap,
     });
 
     await newPost.save();
