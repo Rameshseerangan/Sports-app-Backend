@@ -3,7 +3,7 @@ import Post from "../Models/postModels.js";
 
 export const createPost = async (req, res) => {
   try {
-    const { sports, Feature, Ruls, physical_strength, mental_strength, scholarship_12th, scholarship_collage, Roadmap } = req.body;
+    const { sports, Feature, Ruls, physical_strength, mental_strength, scholarship_12th, scholarship_collage,Achivement_for_Jobs, Roadmap } = req.body;
 
     const newPost = new Post({
       sports,
@@ -13,6 +13,7 @@ export const createPost = async (req, res) => {
       mental_strength,
       scholarship_12th,
       scholarship_collage,
+      Achivement_for_Jobs,
       Roadmap
     });
 
@@ -61,4 +62,3 @@ export const getPostsBySport = async (req, res) => {
     res.status(500).json({ message: 'Failed to fetch posts due to an error.' });
   }
 };
-

@@ -47,11 +47,9 @@ const postSchema = new mongoose.Schema({
     ],
     required: true,
     default: [
-      { subheading: "Warm-Up", content: "" },
-      { subheading: "Technical Skills", content: "" },
-      { subheading: "Tactical Training", content: "" },
-      { subheading: "Physical Conditioning", content: "" },
-      { subheading: "Nutrition Plan", content: "" },
+      { subheading: "International Rules", content: "" },
+      { subheading: "Domestic Rules", content: "" },
+      
     ],
   },
   physical_strength: {
@@ -111,9 +109,7 @@ const postSchema = new mongoose.Schema({
     ],
     required: true,
     default: [
-      { subheading: "Achievements", content: "" },
-      { subheading: "Academic Standards", content: "" },
-      { subheading: "Documentation", content: "" },
+      { subheading: "Infolink", content: "" },
     ],
   },
   scholarship_collage: {
@@ -132,10 +128,26 @@ const postSchema = new mongoose.Schema({
     ],
     required: true,
     default: [
-      { subheading: "Sports Achievements", content: "" },
-      { subheading: "Academic Criteria", content: "" },
-      { subheading: "Selection Process", content: "" },
-      { subheading: "Bonus Points", content: "" },
+      { subheading: "Infolink", content: "" },
+    ],
+  },
+  Achivement_for_Jobs: {
+    type: [
+      {
+        subheading: {
+          type: String,
+          required: true,
+        },
+        content: {
+          type: String,
+          required: true,
+          default: "",
+        },
+      },
+    ],
+    required: true,
+    default: [
+      { subheading: "Infolink", content: "" },
     ],
   },
   Roadmap: {

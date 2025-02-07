@@ -5,6 +5,7 @@ import cors from "cors";
 import connectDB from "./db/dbconfig.js";
 import authRoutes from "./Routs/authRoutes.js";
 import postRoutes from "./Routs/postRoutes.js";
+import tournamentRoutes from "./Routs/tournamentRoutes.js";
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/post", postRoutes);
+app.use("/api/tournament", tournamentRoutes);
 
 
 const PORT = process.env.PORT || 5000;
